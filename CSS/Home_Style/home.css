@@ -1,0 +1,227 @@
+
+/* start header */
+
+header {
+    grid-area: header;
+    height: 520px;
+    display: grid;
+    grid-template: 120px 400px / repeat(2 , 1fr);
+    grid-template-areas: 
+        "nav nav"
+        "laptop-girl intro"
+    ;
+  
+}
+    /* start Nav */
+    nav {
+    grid-area: nav;
+    border-bottom: 1px solid #E3A2D9;
+    width: 100%;
+    height: 120px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    }
+
+    nav .logo img {
+        width: 200px;
+        height: 156px;
+    }
+
+    nav .link{
+        text-decoration: none;
+        font-family: 'Roboto', sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 22px;
+        color: #A60A8D;
+    }
+
+    nav .link:hover{
+        color: #f369dc;
+    }
+
+    /* end Nav */
+
+    /* start presentating heading */
+    header aside {
+        margin-top: 3px;
+        grid-area: laptop-girl;
+        width: 100%;
+        height: 400px;
+        background-image: url("../../Images/undraw_blogging_vpvv.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+
+    }
+
+    header .blog-presentation {
+        width: 100%;
+        height: 100vw;
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        grid-area: intro;
+
+    }
+
+
+
+    header .blog-presentation h1 {
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 600;
+        font-size: 3em;
+        margin: 20px auto;
+        text-align: center;
+        color: #A60A8D;
+
+    }
+
+    header .blog-presentation p {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 28px;
+        line-height: 65px;
+        text-align: center;
+        color: #4F4747;
+    }
+
+    .my-button{
+        margin: 3vw auto ;
+        width: 200px;
+        height: 60px;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 400;
+        font-size: 30px;
+        text-align: center;
+        color: #FFFFF8;
+        background: linear-gradient(180deg, #a60a8d 0%, rgba(166, 10, 141, 0) 121.28%);
+        border: none;
+        border-radius: 50px;
+     }
+
+     .my-button:hover {
+        color: #a60a8d;
+        background: initial;
+        border: 2px solid #a60a8d;
+     }
+    /* end presentating heading */
+
+/* end header */
+
+/* start article */
+
+    article{ 
+        grid-area: article;
+        width:100%;
+        }
+
+    article .line {
+        width: 200px;
+        height: 0px;
+        border-top:4px solid #E3A2D9;
+        margin: 10px auto;
+        grid-area: line;
+        
+    }
+
+    article h2 {
+        grid-area: categories;
+        font-family: 'Open Sans', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 35px;
+        text-align: center;
+        color: #4F4747;
+        margin: 60px 0px;
+    }
+
+    /* start section grid */
+        article #grid-section {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: auto;
+        }
+        article #grid-section .card {
+            display: flex;
+            flex-direction: column;
+            justify-items: center;
+            width: 300px;
+            height: 400px;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            margin: 10px;
+        }
+
+        article #grid-section .card:hover {
+            box-shadow: 0px 4px 4px hotpink;
+            margin-top: 0px;
+        }
+
+        article #grid-section .img-card {
+            width: 100%;
+            height: 55%;
+        }
+
+        /* start text card style */
+            article #grid-section .card h3 {
+                margin: 10px 0px;
+                font-family: 'Open Sans', sans-serif;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 35px;
+                text-align: center;
+                color: #000000;
+            }
+
+            article #grid-section .card p , .card figcaption {
+                margin: 5px 0px;
+                font-family: "Open Sans" , sans-serif;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 40px;
+                font-size: 20px;
+                text-align: center;
+                color: #4F4747;
+            }
+
+        /* end text card style */
+    /* end section grid */
+
+    /* start View more */
+            article .view-more {
+                display: flex;
+                flex-direction: row-reverse;
+                justify-content: flex-start;
+                margin-top: 20px;
+                text-decoration: none;
+            }
+
+            article .view-more :hover {
+                color: hotpink;
+            }
+
+            article .arrow{
+                margin: 0px 10px;
+            }
+
+            article .view-more p {
+                font-family: "Open Sans" , sans-serif;
+                font-style: normal;
+                font-weight: 300;
+                font-size: 20px;
+                margin-top: -5px;
+                text-align: center;
+                color: #000000;
+            }
+    /* end View more */
+
+/* end article */
+
+
+
+
+
+
+

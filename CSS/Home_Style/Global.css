@@ -1,0 +1,23 @@
+/* Start Global Styles */
+    * {
+        padding: 0px;
+        margin: 0px;
+    }
+
+    body {
+        display: grid;
+        grid-template: 520px 1fr 470px 200px / repeat(12, 1fr);
+        grid-template-areas: 
+            "header header header header header header header header header header header header"
+            "article article article article article article article article article article article article"
+            "form form form form form form form form form form form form"
+            "footer footer footer footer footer footer footer footer footer footer footer footer"
+        ;
+
+        row-gap: 60px;
+    }
+
+    a {
+        text-decoration: none;
+    }
+/* End Global Styles */

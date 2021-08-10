@@ -1,0 +1,332 @@
+/* Global styles */
+
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+
+body {
+    display: grid;
+    grid-template: 520px repeat(5 , 2000px) 500px 470px 200px / repeat(12, 1fr);
+    grid-template-areas: 
+        "header header header header header header header header header header header header"
+        "article1 article1 article1 article1 article1 article1 article1 article1 article1 article1 article1 article1"
+        "article2 article2 article2 article2 article2 article2 article2 article2 article2 article2 article2 article2"
+        "article3 article3 article3 article3 article3 article3 article3 article3 article3 article3 article3 article3"
+        "article4 article4 article4 article4 article4 article4 article4 article4 article4 article4 article4 article4"
+        "article5 article5 article5 article5 article5 article5 article5 article5 article5 article5 article5 article5"
+        "author author author author author author author author author author author author"
+        "form form form form form form form form form form form form"
+        "footer footer footer footer footer footer footer footer footer footer footer footer"
+    ;
+
+    row-gap: 1%;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* start header */
+
+header {
+    grid-area: header;
+    width: 100%;
+    height: 520px;
+    display: grid;
+    grid-template: 120px 400px / repeat(2 , 1fr);
+    grid-template-areas: 
+        "nav nav"
+        "intro intro"
+    ;
+  
+}
+    /* start Nav */
+        nav {
+        grid-area: nav;
+        border-bottom: 1px solid #E3A2D9;
+        width: 100%;
+        height: 120px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        }
+
+        .logo img {
+            width: 200px;
+            height: 156px;
+        }
+
+        nav .link{
+            text-decoration: none;
+            font-family: 'Roboto', sans-serif;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 22px;
+            color: #A60A8D;
+        }
+
+        nav .link:hover{
+            color: #f369dc;
+        }
+
+    /* end Nav */
+
+    /* start section header */
+        header .blog-topic {            
+            grid-area: intro;
+            width: 100%;
+            height: 135%;
+            background-image: url("../../Images/Rectangle girl.png");
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        header .blog-topic .main-topic {
+            font-family: 'Roboto' , sans-serif;
+            font-weight: bold;
+            font-size: 60px;
+            color: #682B5F;
+            line-height: 138%;
+            text-align: center;
+        }
+
+        header .blog-topic .author {
+            width: 50%;
+            height: 50%;
+            display: grid;
+            grid-template: 50px 50px / 85px 174px;
+            grid-template-areas: 
+                "author name"
+                "author date"
+            ;
+            align-content: center;
+            row-gap: 10px;
+            column-gap: 30px;
+            margin-top: 40px;
+        }
+
+
+        .author-img {
+            grid-area: author;
+            height: 80px;
+            width: 80px;
+            background-image: url("../../Images/89941419_208860230349565_3345071764513226752_n.jpg");
+            background-size: cover;
+            border-radius: 200px;
+            align-self: center;
+            justify-self: center;
+        }
+
+        header .blog-topic .author h2 {
+            grid-area: name;
+            align-self: flex-end;
+        }
+
+        .same-style-name {
+            font-family: 'Roboto' , sans-serif;
+            font-weight: 500;
+            font-size: 30px;
+            color: #FFFFF8;
+        }
+
+        header .blog-topic .author p {
+            grid-area: date;
+            font-family: 'Roboto' , sans-serif;
+            font-weight: 300;
+            font-size: 20px;
+            color: #443A3A;
+        }
+    /* end section header */
+
+/* end header */
+
+/* start articles */
+
+    article { 
+        display: grid;
+        grid-template: 15% 75% 500px / 1fr 1fr;
+        grid-template-areas: 
+            "intro intro"
+            "tip-section tip-section"
+            "discriptive-img discriptive-img"
+        ;
+        justify-items: center;
+        align-items: center;
+    }
+
+    .article1{
+        grid-area: article1;
+    }
+
+    .article2 {
+        grid-area: article2;
+    }
+
+    .article3 {
+        grid-area: article3;
+    }
+
+    .article4 {
+        grid-area: article4;
+    }
+
+    .article5 {
+        grid-area: article5;
+    }
+
+    /* start paragraphs style */
+    .text , .quote{
+        width: 80%;
+        font-family: 'Roboto' , sans-serif;
+        font-weight: bold;
+        font-size: 30px;
+        line-height: 150%;
+        color: #000000;
+        text-align: center;
+        margin-top: 60px;
+    }
+
+    .quote {
+        background-color: lightblue;
+    }
+
+    .text span{
+        width: 80%;
+        font-family: 'Roboto' , sans-serif;
+        font-weight: bold;
+        text-decoration: underline;
+        font-size: 30px;
+        line-height: 150%;
+        color: #000000;
+        text-align: center;
+        margin-top: 60px;
+    }
+    /* end paragraphs style */
+
+    article .tip-section {
+        grid-area: tip-section;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        overflow: hidden;
+
+        
+    }
+
+    article .tip-section .intro {
+        grid-area: intro;
+        height: 30%;
+        margin: 50px 0px;
+    }
+
+
+    article .tip-section .many-tips {
+        display: flex;
+        flex-direction: row;
+        align-self: flex-start;
+        margin: 3% 0px;
+    }
+
+    article .tip-section .many-tips .line {
+        height: 116px;
+        width: 100px;
+        border-right: 5px solid #e3aca2;
+    }
+
+    article .tip-section .many-tips .sign {
+        width: 14%;
+        margin: 0px 2%;
+    }
+
+    article .tip-section .many-tips .tip{
+        font-family: 'Roboto' , sans-serif;
+        font-size: 40px;
+        color: #A60A8D;
+        align-self: center;
+        justify-self: center;
+    }
+
+
+    article .tip-section .many-tips #info {
+        color: #000000;
+        width: 100%;
+    }
+
+    /* start discriptive images style */
+
+    section img {
+        grid-area: discriptive-img;
+        margin: 50px auto;
+
+    }
+
+    /* end discriptive images style */
+
+/* end articles */
+
+/* start author's card */
+
+.author-part{
+    grid-area: author;
+    justify-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-top: 2px solid #c4c4c4;
+    border-bottom: 2px solid #c4c4c4;
+    width: 60%;
+}
+
+
+.author-part .same-style-name {
+    color: #000000;
+    margin: 20px auto;
+
+}
+
+.author-part p {
+    font-family: 'Roboto' , sans-serif;
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 73px;
+    text-align: center;
+    color: #676262;
+    margin: 20px auto;
+}
+
+/* start author's card */
+
+/* start Button Style */
+
+.my-button{
+    margin: 20px auto ;
+    width: 200px;
+    height: 60px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 30px;
+    text-align: center;
+    color: #FFFFF8;
+    background: linear-gradient(180deg, #a60a8d 0%, rgba(166, 10, 141, 0) 121.28%);
+    border: none;
+    border-radius: 50px;
+ }
+
+ .my-button:hover {
+    color: #a60a8d;
+    background: initial;
+    border: 2px solid #a60a8d;
+ }
+
+/* end Button Style */
+
+
+

@@ -1,0 +1,302 @@
+/* end Imported Files */
+
+/* Post.css */
+@import "./Post.css";
+
+/* Form and Footer Style.css */
+@import "../Home_Style/Form_and_Footer_Style.css";
+
+/* end Imported Files */
+
+
+
+
+
+/* Star Media Queries */
+
+/* change happens at 390px or less */
+@media(max-width:450px) {
+    /* start modifying header */
+
+        /* start section header */
+        header .blog-topic {            
+            grid-area: intro;
+            width: 100vw;
+            height: 115%;
+            background-image: url("../../Images/Rectangle\ girl.png");
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        header .blog-topic .author {
+            width: 100%;
+            height: 50%;
+            display: grid;
+            grid-template: 50px 50px / 85px 174px;
+            grid-template-areas: 
+                "author name"
+                "author date"
+            ;
+            align-content: flex-start;
+            flex-wrap: wrap;
+            row-gap: 10px;
+            column-gap: 30px;
+            margin-top: 40px;
+        }
+    /* end section header */
+
+
+/* end modifying header */
+    
+}
+
+
+/* change happens at 500px or less */
+@media(max-width:500px) {
+            header .blog-topic {
+                margin-top: 1%;
+            }
+
+         /* start modifying Nav */
+             nav {
+                grid-area: nav;
+                border-top: 2px solid #E3A2D9;
+                border-bottom: 2px solid #E3A2D9;
+                width: 99%;
+                height: 100%;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: flex-start;
+                align-items: center;
+                
+            }
+    
+            .logo img {
+                width: 150px;
+                height: 140px;
+                margin-left: 0%;
+            }
+
+            .logo {
+                order: 1;
+            }
+        
+            nav .link{
+                display: none;
+            }
+
+            nav .keep {
+                display: inline;
+                order: 2;
+                margin-left: 10%;
+            }
+    
+            nav .menu {
+                width: 52px;
+                height: 56px;
+                background-image: url("../../Images/list.png");
+                background-size: contain;
+                margin-left: 15%;
+                order: 3;
+            }
+            
+        /* end modifying Nav */
+
+        /* fix image responsivness on 500px */
+        section img {
+            grid-area: discriptive-img;
+            margin: 50px auto;
+            width: 100vw;
+    
+        }
+
+}
+
+/* change happens at 850px or less */
+@media(max-width:850px) {
+    /* start articles */
+
+    article { 
+        display: grid;
+        grid-template: 27% 90% 500px / 1fr 1fr;
+        grid-template-areas: 
+            "intro intro"
+            "tip-section tip-section"
+        ;
+        justify-items: center;
+        align-items: center;
+
+    }
+
+     /* start paragraphs style */
+     .text{
+        font-size: 22px;
+        width: 100vw;
+        font-family: 'Roboto' , sans-serif;
+        font-weight: 300;
+        line-height: 150%;
+        color: #000000;
+        text-align: center;
+        margin-top: 60px;
+
+    }
+    /* end paragraphs style */
+    article .tip-section {
+        grid-area: tip-section;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        overflow: hidden;
+
+        
+    }
+
+    article .tip-section .many-tips {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 3% auto;
+
+    }
+
+    article .tip-section .many-tips .line {
+        height: 0px;
+        width: 50vw;
+        border-top: 5px solid #e3aca2;
+
+    }
+
+    article .tip-section .many-tips .sign {
+        width: 30%;
+        margin: 6% auto;
+        text-align: center;
+    }
+
+    article .tip-section .many-tips #info {
+        color: #000000;
+        width: 100vw;
+        text-align: center;
+    }
+
+
+    /* start modifying author's card */
+
+    body {
+        display: grid;
+        grid-template: 520px repeat(5 , 2000px) 1fr 470px 200px / repeat(12, 1fr);
+        grid-template-areas: 
+            "header header header header header header header header header header header header"
+            "article1 article1 article1 article1 article1 article1 article1 article1 article1 article1 article1 article1"
+            "article2 article2 article2 article2 article2 article2 article2 article2 article2 article2 article2 article2"
+            "article3 article3 article3 article3 article3 article3 article3 article3 article3 article3 article3 article3"
+            "article4 article4 article4 article4 article4 article4 article4 article4 article4 article4 article4 article4"
+            "article5 article5 article5 article5 article5 article5 article5 article5 article5 article5 article5 article5"
+            "author author author author author author author author author author author author"
+            "form form form form form form form form form form form form"
+            "footer footer footer footer footer footer footer footer footer footer footer footer"
+        ;
+    
+        row-gap: 3%;
+    }
+
+
+
+
+        .author-part{
+            grid-area: author;
+            justify-self: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-top: 1% solid #c4c4c4;
+            border-bottom: 1% solid #c4c4c4;
+            width: 80%;
+            height: 100%;
+        }
+
+
+    /* end modifying author's card */
+
+
+}
+
+/* change happens at 792px or less */
+@media(max-width:792px) {
+
+    /* start modifying form card */
+
+        .form-card .img-form {
+            display: none;
+        }
+
+        .form-card .subscribtion-form {
+            width: 100%;
+            background-image: url("../../Images/pic-pana\ 1.png");
+            background-size: cover;
+        }
+
+        .form-card .subscribtion-form form h3 {
+            margin-top: 5%;
+        }
+
+    /* start modifying form card */
+
+}
+
+/* change happens at 750px or less */
+@media(max-width:750px) {
+
+    body {
+        display: grid;
+        grid-template: 520px repeat(5 , 2000px) 1fr 470px 10% / repeat(12, 1fr);
+        grid-template-areas: 
+            "header header header header header header header header header header header header"
+            "article1 article1 article1 article1 article1 article1 article1 article1 article1 article1 article1 article1"
+            "article2 article2 article2 article2 article2 article2 article2 article2 article2 article2 article2 article2"
+            "article3 article3 article3 article3 article3 article3 article3 article3 article3 article3 article3 article3"
+            "article4 article4 article4 article4 article4 article4 article4 article4 article4 article4 article4 article4"
+            "article5 article5 article5 article5 article5 article5 article5 article5 article5 article5 article5 article5"
+            "author author author author author author author author author author author author"
+            "form form form form form form form form form form form form"
+            "footer footer footer footer footer footer footer footer footer footer footer footer"
+        ;
+    
+        row-gap: 3%;
+    }
+
+    /* start footer */
+        footer{
+            display: flex;
+            flex-direction: column;
+
+        }
+
+        #ft-logo {
+            display: none;
+        }
+
+        footer p {
+            margin-top: 10%;
+        }
+
+        footer .social-media {
+            flex-direction: row;
+            flex-wrap: wrap;
+            margin: 7%;
+        }
+
+        footer .social-media .social{
+            margin-top: 10px;
+        }
+
+    /* end footer */
+
+}
+
+/* End Media Queries */
